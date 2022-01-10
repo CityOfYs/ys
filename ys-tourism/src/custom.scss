@@ -2,19 +2,16 @@
 // Option A: Include all of Bootstrap
 // Your variable overrides
 //$body-bg: #CAD5B2;
-$body-color: #A64998;
-$bg-primary: #2C6E49;
+$body-color: black;
+$bg-primary: #00418C;
 $bg-secondary: #CAD5B2;
 
 $theme-colors: (
   "primary": #1B9AAA,
-  "danger": #ff4136
+  "danger": #ff4136,
+  "dark": #00418C
 );
 
-
-.green-bg {
-  background-color: $bg-secondary;
-}
 
 .white-font {
   color: white;
@@ -26,10 +23,10 @@ $theme-colors: (
 
 .jumbotron-image {
   background: url('images/city-hall.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
-  padding: 20%;
+  padding: 25%;
 }
 
-.padding-20 {
+.padding-20-sides {
   padding-left: 20em;
   padding-right: 20em;
 }
@@ -42,8 +39,16 @@ $theme-colors: (
   padding: 5px;
 }
 
+.padding-15 {
+  padding: 15px;
+}
+
 .padding-20 {
   padding: 20px;
+}
+
+.padding-40 {
+  padding: 40px;
 }
 
 .border-1 {

@@ -1,4 +1,4 @@
-import logo from './images/Logo.png';
+import logo from './images/logo.svg';
 import sunsetshore from './images/sunset-shore.png';
 import cloudlump from './images/cloudlump.png';
 import stream from './images/stream.jpg';
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Navbar bg="dark" >
+          <Navbar bg="dark"  fixed="top">
             <Navbar.Brand>
               <Image src={logo} className="ys-logo App-logo" alt="logo" rounded xs={1}  />
             </Navbar.Brand >
@@ -34,24 +34,18 @@ class App extends Component {
           <Container fluid>
           <Row>
           <Jumbotron fluid className="jumbotron-image black-font">
-            <h1>Regular, Jumbotron!</h1>
-            <p>
-              This is a simple Jumbotron example.
-            </p>
-
-            <p>
-            </p>
+            <h1>A place your heart can never forget</h1>
           </Jumbotron>
           </Row>
-          <Row id="tourism" className="border-bottom padding-5">
-            <div className="padding-20"></div>
-            <h1>Planning your vacation to Ys</h1>
+          <Row id="tourism" className="padding-5">
+            <div className="padding-40"></div>
+            <div className="padding-15"></div>
           </Row>
           <Row>
             <Col>
             </Col>
             <Col className="padding-5">
-              <Carousel fade variant="dark" controls={false} intervale={1000}>
+              <Carousel fade variant="dark" controls={false} intervale={700}>
                 <Carousel.Item>
                   <Image src={sunsetshore} className="d-block w-10" />
                 </Carousel.Item>
@@ -73,7 +67,7 @@ class App extends Component {
           <Row>
             <Col className="padding-0">
             </Col>
-            <Col  className="padding-5 col-6">
+            <Col  className="padding-5 col-7">
               <Row>
                 <Col className="border-bottom green-bg">
                   Ys is a coastal city, nestled in the foothills of the —— mountains.
@@ -82,7 +76,6 @@ class App extends Component {
                   wind, and fog, so remember to pack a variety of layers.
                 </Col>
               </Row>
-
               <Row>
                 <Col className="green-bg">
                   Spring
