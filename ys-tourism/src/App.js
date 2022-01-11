@@ -11,6 +11,7 @@ import React, { Component } from "react";
 import Weather from "./Weather";
 import PlaceToGo from "./PlaceToGo";
 import ThingsToDo from "./ThingsToDo";
+import Footer from "./Footer";
 
 class App extends Component {
 
@@ -33,7 +34,7 @@ class App extends Component {
           <Container fluid>
           <Row>
           <Jumbotron fluid className="jumbotron-image">
-            <h1>A place your mind can never forget</h1>
+            <h1 className="hero-font">A place your mind can never forget</h1>
           </Jumbotron>
           </Row>
 
@@ -41,9 +42,7 @@ class App extends Component {
           <PlaceToGo />
           <ThingsToDo />
 
-          <Row>
-          <a href="https://twitter.com/CityOfYs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @CityOfYs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </Row>
+          <Footer />
         </Container>
       </div>
     );
