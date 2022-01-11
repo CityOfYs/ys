@@ -9,7 +9,8 @@ $bg-secondary: #CAD5B2;
 $theme-colors: (
   "primary": #1B9AAA,
   "danger": #ff4136,
-  "dark": #00418C
+  "dark": #00418C,
+  "light": white
 );
 
 
@@ -29,6 +30,10 @@ $theme-colors: (
 .padding-20-sides {
   padding-left: 20em;
   padding-right: 20em;
+}
+
+.padding-left-1p {
+  padding-left: 1%;
 }
 
 .padding-0 {
