@@ -7,7 +7,7 @@ $bg-primary: #00418C;
 $bg-secondary: #CAD5B2;
 
 $theme-colors: (
-  "primary": #1B9AAA,
+  "primary": #00418C,
   "danger": #ff4136,
   "dark": #00418C,
   "light": white
@@ -37,6 +37,10 @@ $theme-colors: (
 
 .padding-left-1p {
   padding-left: 1%;
+}
+
+.padding-bottom-1p {
+  padding-bottom: 1%;
 }
 
 .padding-0 {
@@ -73,8 +77,13 @@ $theme-colors: (
   font-weight: bolder;
   color: white;
   font-style: italic;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
+}
+
+#city-brand {
+  display: inline;
+  font-size: 2em;
+  vertical-align: middle;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";

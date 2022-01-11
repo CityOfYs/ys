@@ -20,7 +20,7 @@ class ThingsToDo extends React.Component {
           <div className="padding-15"></div>
           <h1>Things To Do</h1>
         </Row>
-        <Row>
+        <Row className="padding-bottom-1p">
           <Col>
           </Col>
           <Col>
@@ -50,7 +50,7 @@ class ThingsToDo extends React.Component {
           <Col>
           </Col>
         </Row>
-        <Row>
+        <Row className="padding-bottom-1p">
           <Col>
           </Col>
           <Col>

@@ -2,7 +2,6 @@ import React from "react";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import farmhouse from './images/farmhouse.jpg';
 import bluffs from './images/alexsea.png';
 import theaterdistrict from './images/theater-district.png';
 import cliffhouse from './images/cliffhouse.jpg';
@@ -21,7 +20,7 @@ class PlaceToGo extends React.Component {
           <div className="padding-15"></div>
           <h1>Places To Go</h1>
         </Row>
-        <Row>
+        <Row className="padding-bottom-1p">
           <Col>
           </Col>
           <Col>
@@ -51,7 +50,7 @@ class PlaceToGo extends React.Component {
           <Col>
           </Col>
         </Row>
-        <Row>
+        <Row className="padding-bottom-1p">
           <Col>
           </Col>
           <Col>
