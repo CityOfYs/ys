@@ -6,6 +6,10 @@ import stream from './images/stream.jpg';
 import housetree from './images/house-tree.jpg';
 import sunsetshore from './images/sunset-shore.png';
 import cityfacade from './images/city-facade.png';
+import theater from './images/theater.png';
+import festival from './images/festival2.png';
+import food from './images/food.png';
+import sky from './images/sky4.png';
 
 class ThingsToDo extends React.Component {
   render() {
@@ -33,7 +37,7 @@ class ThingsToDo extends React.Component {
           </Col>
           <Col>
             <Card style={{ width: '15rem' }}>
-              <Card.Img variant="top" src={cityfacade} />
+              <Card.Img variant="top" src={food} />
               <Card.Title>Culinary Activities</Card.Title>
             </Card>
           </Col>
@@ -51,25 +55,25 @@ class ThingsToDo extends React.Component {
           </Col>
           <Col>
             <Card style={{ width: '15rem' }}>
-              <Card.Img variant="top" src={stream} />
+              <Card.Img variant="top" src={cityfacade} />
               <Card.Title>Culture & Heritage</Card.Title>
             </Card>
           </Col>
           <Col>
             <Card style={{ width: '15rem' }}>
-              <Card.Img variant="top" src={sunsetshore} />
+              <Card.Img variant="top" src={theater} />
               <Card.Title>Music & The Arts</Card.Title>
             </Card>
           </Col>
           <Col>
             <Card style={{ width: '15rem' }}>
-              <Card.Img variant="top" src={cityfacade} />
+              <Card.Img variant="top" src={festival} />
               <Card.Title>Festivals & Events</Card.Title>
             </Card>
           </Col>
           <Col>
             <Card style={{ width: '15rem' }}>
-              <Card.Img variant="top" src={housetree} />
+              <Card.Img variant="top" src={sky} />
               <Card.Title>Marvel</Card.Title>
             </Card>
           </Col>

@@ -13,6 +13,9 @@ $theme-colors: (
   "light": white
 );
 
+.primary-background {
+  background-color: $bg-primary
+}
 
 .white-font {
   color: white;
@@ -62,6 +65,16 @@ $theme-colors: (
 
 .border-bottom {
   border-bottom: solid 1px black;
+}
+
+.hero-font {
+  font-size: 5em;
+  font-family: cursive;
+  font-weight: bolder;
+  color: white;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
