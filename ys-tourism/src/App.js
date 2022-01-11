@@ -18,17 +18,26 @@ class App extends Component {
   render() {
     return (
       <div className="App" id="home">
-          <Navbar bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand className="padding-left-1p">
-              <Image src={logo} className="ys-logo App-logo" alt="logo" rounded xs={1}  />
+          <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
+            <Container>
+            <Navbar.Brand  href="#home">
+              <img
+                alt=""
+                src={logo}
+                width="60"
+                height="60"
+                className="d-inline-block"
+              />{' '}
+              <div id="city-brand"><strong>YS</strong> City of Waters</div>
             </Navbar.Brand >
-            <Navbar.Brand className="text-left white-font" variant="dark">
-              <h1>YS</h1> City of Waters
-            </Navbar.Brand>
-            <Nav.Link href="#home" variant="dark">Home</Nav.Link>
-            <Nav.Link href="#tourism">Planning Your Visit</Nav.Link>
-            <Nav.Link href="#places">Places To Go</Nav.Link>
-            <Nav.Link href="#things">Things To Do</Nav.Link>
+            <Container>
+            <Nav className="me-auto" fill justify defaultActiveKey="/#home">
+              <Nav.Link href="#tourism" className="white-font">Planning Your Visit</Nav.Link>
+              <Nav.Link href="#places" className="link-light">Places To Go</Nav.Link>
+              <Nav.Link href="#things" className="link-light">Things To Do</Nav.Link>
+            </Nav>
+            </Container>
+            </Container>
           </Navbar>
 
           <Container fluid>
