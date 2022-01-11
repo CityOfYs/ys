@@ -1,8 +1,6 @@
 import React from "react";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
 class Footer extends React.Component {
   render() {
@@ -24,7 +22,7 @@ class Footer extends React.Component {
           </Col>
           <Col>
             Connect With Us:
-            <a href="https://twitter.com/CityOfYs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @CityOfYs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a href="https://twitter.com/CityOfYs?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @CityOfYs</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
           </Col>
           <Col>
           </Col>

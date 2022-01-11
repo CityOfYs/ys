@@ -1,11 +1,9 @@
 import logo from './images/logo.svg';
 import './App.css';
-import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import React, { Component } from "react";
 import Weather from "./Weather";
