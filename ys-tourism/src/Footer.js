@@ -12,22 +12,19 @@ class Footer extends React.Component {
           <Col>
           </Col>
           <Col>
-            <ul >
-              <li>About</li>
-              <li>Careers</li>
-            </ul>
+            <p>© 2022 Ys Visitors Bureau. All Rights Reserved.</p>
           </Col>
           <Col>
           </Col>
           <Col>
+          Contact Information:
+          <br /><a href="mailto:cityofys.gov+toursim@gmail.com">Contact us by email</a>
           </Col>
           <Col>
-          <ListGroup variant="flush">
-          Connect With Us:
-          <ListGroup.Item>
+          </Col>
+          <Col>
+            Connect With Us:
             <a href="https://twitter.com/CityOfYs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @CityOfYs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </ListGroup.Item>
-          </ListGroup>
           </Col>
           <Col>
           </Col>
