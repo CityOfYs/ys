@@ -49,7 +49,7 @@ class App extends Component {
           <PlaceToGo />
           <ThingsToDo />
 
-          <Footer />
+          <Footer orgname="Ys Visitors Bureau" email="mailto:cityofys.gov+toursim@gmail.com"/>
         </Container>
       </div>
     );

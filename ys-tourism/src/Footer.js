@@ -10,13 +10,13 @@ class Footer extends React.Component {
           <Col>
           </Col>
           <Col>
-            <p>© 2022 Ys Visitors Bureau. All Rights Reserved.</p>
+            <p>© 2022 {this.props.orgname}. All Rights Reserved.</p>
           </Col>
           <Col>
           </Col>
           <Col>
           Contact Information:
-          <br /><a href="mailto:cityofys.gov+toursim@gmail.com">Contact us by email</a>
+          <br /><a href={this.props.email}>Contact us by email</a>
           </Col>
           <Col>
           </Col>
