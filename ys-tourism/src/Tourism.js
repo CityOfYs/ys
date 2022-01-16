@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App page-container" id="home">
+      <div className="text-centered page-container" id="home">
           <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
             <Container>
               <YsNavLogo />

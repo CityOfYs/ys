@@ -25,6 +25,10 @@ $theme-colors: (
   color: black;
 }
 
+.text-centered {
+  text-align: center;
+}
+
 .jumbotron-image {
   background: url('images/city-hall.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
   padding: 25%;
