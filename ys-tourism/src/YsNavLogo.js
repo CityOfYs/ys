@@ -1,11 +1,9 @@
 import logo from './images/logo.svg';
 import './App.css';
-import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 import React, { Component } from "react";
 
-class YsNavLogo extends React.Component {
+class YsNavLogo extends Component {
   render () {
     return <div>
       <Navbar.Brand  href="#home">

@@ -1,4 +1,3 @@
-import logo from './images/logo.svg';
 import './App.css';
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
@@ -19,14 +18,14 @@ class App extends Component {
       <div className="App" id="home">
           <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
             <Container>
-            <YsNavLogo />
-            <Container>
-            <Nav className="me-auto" fill justify defaultActiveKey="/#home">
-              <Nav.Link href="#tourism" className="white-font">Planning Your Visit</Nav.Link>
-              <Nav.Link href="#places" className="link-light">Places To Go</Nav.Link>
-              <Nav.Link href="#things" className="link-light">Things To Do</Nav.Link>
-            </Nav>
-            </Container>
+              <YsNavLogo />
+              <Container>
+                <Nav className="me-auto" fill justify defaultActiveKey="/#home">
+                  <Nav.Link href="#tourism" className="white-font">Planning Your Visit</Nav.Link>
+                  <Nav.Link href="#places" className="link-light">Places To Go</Nav.Link>
+                  <Nav.Link href="#things" className="link-light">Things To Do</Nav.Link>
+                </Nav>
+              </Container>
             </Container>
           </Navbar>
 
