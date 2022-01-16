@@ -10,6 +10,7 @@ import Weather from "./Weather";
 import PlaceToGo from "./PlaceToGo";
 import ThingsToDo from "./ThingsToDo";
 import Footer from "./Footer";
+import YsNavLogo from "./YsNavLogo";
 
 class App extends Component {
 
@@ -18,16 +19,7 @@ class App extends Component {
       <div className="App" id="home">
           <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
             <Container>
-            <Navbar.Brand  href="#home">
-              <img
-                alt=""
-                src={logo}
-                width="60"
-                height="60"
-                className="d-inline-block"
-              />{' '}
-              <div id="city-brand"><strong>YS</strong> City of Waters</div>
-            </Navbar.Brand >
+            <YsNavLogo />
             <Container>
             <Nav className="me-auto" fill justify defaultActiveKey="/#home">
               <Nav.Link href="#tourism" className="white-font">Planning Your Visit</Nav.Link>
