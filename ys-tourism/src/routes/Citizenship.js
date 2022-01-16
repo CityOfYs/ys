@@ -6,11 +6,14 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import PDFViewer from './PDFViewer';
 
 
 export default function Citizenship() {
+  const [activeLink, setActiveLink] = useState("");
+  const handleSelect = (eventKey) => setActiveLink(eventKey);
+
   return (
     <main className="App">
       <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
@@ -36,11 +39,20 @@ export default function Citizenship() {
 
         <Row>
           <Col>
-            Citizenship Resource Center
+            <Nav defaultActiveKey="/home" className="flex-column" activeKey="/home" onSelect={handleSelect}>
+            <Nav.Link eventKey="citizenhome">Home</Nav.Link>
+            <Nav.Link eventKey="eligibility">Citizenship Eligibility Tool</Nav.Link>
+            <Nav.Link eventKey="disabled" disabled>
+              Naturalization Application Portal (coming soon)
+            </Nav.Link>
+            </Nav>
           </Col>
-          <Col>
-            Citizenship Eligibility Worksheet
-            <PDFViewer />
+          <Col style={{ display: activeLink === "eligibility" ? "block" : "none" }}>
+              Citizenship Eligibility Worksheet
+              <PDFViewer />
+          </Col>
+          <Col style={{ display: activeLink === "citizenhome" ? "block" : "none" }}>
+            So you with to become a citizen! Commendable, and foolhardy.
           </Col>
           <Col>
           </Col>

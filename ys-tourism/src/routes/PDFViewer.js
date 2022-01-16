@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import naturalizationFlowchart from './../forms/Eligibility_for_Naturalization_2019-08-16.pdf';
 
