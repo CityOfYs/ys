@@ -11,7 +11,7 @@ import PDFViewer from './PDFViewer';
 
 
 export default function Citizenship() {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("citizenhome");
   const handleSelect = (eventKey) => setActiveLink(eventKey);
 
   return (
@@ -60,7 +60,7 @@ export default function Citizenship() {
         </Row>
         <Footer orgname="Ys City Government"
           email="mailto:cityofys.gov+immigration-support"
-          needsAbs={activeLink == "citizenhome" ? true : false} />
+          needsAbs={activeLink === "citizenhome" ? true : false} />
       </Container>
     </main>
   );
