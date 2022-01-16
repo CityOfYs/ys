@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import naturalizationFlowchart from './../forms/Eligibility_for_Naturalization_2019-08-16.pdf';
 
@@ -31,20 +32,18 @@ export default function PDFViewer() {
       <p>
         Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
       </p>
-      <button
-        type="button"
+      <Button
         disabled={pageNumber <= 1}
         onClick={previousPage}
       >
         Previous
-      </button>
-      <button
-        type="button"
+      </Button>
+      <Button
         disabled={pageNumber >= numPages}
         onClick={nextPage}
       >
         Next
-      </button>
+      </Button>
       <a href={naturalizationFlowchart}>Download</a>
     </div>
     </div>
