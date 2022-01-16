@@ -6,10 +6,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import React, { useState }  from 'react';
-
-import naturalizationFlowchart from './../forms/Eligibility_for_Naturalization_2019-08-16.pdf';
+import PDFViewer from './PDFViewer';
 
 
 export default function Citizenship() {
@@ -42,9 +40,7 @@ export default function Citizenship() {
           </Col>
           <Col>
             Citizenship Eligibility Worksheet
-            <Document file={naturalizationFlowchart}>
-              <Page pageNumber={1} />
-            </Document>
+            <PDFViewer />
           </Col>
           <Col>
           </Col>
