@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 class Footer extends React.Component {
   render() {
     return (
-      <div>
+      <div id="footer" style={{ position: this.props.needsAbs ? "absolute" : "relative" }}>
         <Row className="primary-background padding-20 white-font">
           <Col>
           </Col>

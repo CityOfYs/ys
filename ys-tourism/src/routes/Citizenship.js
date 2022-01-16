@@ -16,6 +16,7 @@ export default function Citizenship() {
 
   return (
     <main className="App">
+    <main className="App page-container">
       <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
         <Container>
           <YsNavLogo />
@@ -57,7 +58,9 @@ export default function Citizenship() {
           <Col>
           </Col>
         </Row>
-        <Footer orgname="Ys City Government" email="mailto:cityofys.gov+immigration-support" />
+        <Footer orgname="Ys City Government"
+          email="mailto:cityofys.gov+immigration-support"
+          needsAbs={activeLink == "citizenhome" ? true : false} />
       </Container>
     </main>
   );

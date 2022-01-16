@@ -86,4 +86,14 @@ $theme-colors: (
   vertical-align: middle;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
