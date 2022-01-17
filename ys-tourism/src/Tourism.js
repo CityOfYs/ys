@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import React, { Component } from "react";
+import Alert from 'react-bootstrap/Alert'
 import Weather from "./Weather";
 import PlaceToGo from "./PlaceToGo";
 import ThingsToDo from "./ThingsToDo";
@@ -16,7 +17,12 @@ class App extends Component {
   render() {
     return (
       <div className="text-centered page-container" id="home">
-          <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
+        <Alert className="padding-0 margin-bottom-none" variant="danger" >
+          COVID-19: Update for Travellers <Alert.Link href="https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19-travel-advice-for-the-general-public">
+          Learn more
+          </Alert.Link>
+        </Alert>
+          <Navbar bg="primary" expand="lg" variant="dark" sticky="top">
             <Container>
               <YsNavLogo />
               <Container>
