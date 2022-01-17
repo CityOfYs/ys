@@ -36,6 +36,7 @@ export default function PDFViewer() {
         variant="outline-primary"
         disabled={pageNumber <= 1}
         onClick={previousPage}
+        className="margin-right-1p"
       >
         Previous
       </Button>
@@ -43,10 +44,11 @@ export default function PDFViewer() {
         variant="outline-primary"
         disabled={pageNumber >= numPages}
         onClick={nextPage}
+        className="margin-right-1p"
       >
         Next
       </Button>
-      <a href={naturalizationFlowchart}>Download</a>
+      <a href={naturalizationFlowchart}>Download PDF</a>
     </div>
     </div>
   )
