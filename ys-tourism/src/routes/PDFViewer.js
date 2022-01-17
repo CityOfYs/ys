@@ -33,12 +33,14 @@ export default function PDFViewer() {
         Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
       </p>
       <Button
+        variant="outline-primary"
         disabled={pageNumber <= 1}
         onClick={previousPage}
       >
         Previous
       </Button>
       <Button
+        variant="outline-primary"
         disabled={pageNumber >= numPages}
         onClick={nextPage}
       >

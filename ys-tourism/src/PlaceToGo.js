@@ -16,7 +16,7 @@ class PlaceToGo extends React.Component {
     return (
       <div>
         <Row id="places" className="padding-5">
-          <div className="padding-40"></div>
+          <div className="padding-40px"></div>
           <div className="padding-15"></div>
           <h1>Places To Go</h1>
         </Row>
