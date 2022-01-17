@@ -11,7 +11,7 @@ class Weather extends React.Component {
     return (
       <div>
       <Row id="tourism" className="padding-5">
-        <div className="padding-40"></div>
+        <div className="padding-40px"></div>
         <h1>Planning Your Visit</h1>
       </Row>
       <Row>

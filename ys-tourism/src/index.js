@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Tourism from './Tourism';
 import reportWebVitals from './reportWebVitals';
 import './custom.scss';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";import Citizenship from "./routes/Citizenship";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Tourism />} />
+        <Route path="citizenship-resource-center" element={<Citizenship />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

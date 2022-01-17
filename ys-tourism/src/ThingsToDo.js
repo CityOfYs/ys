@@ -16,7 +16,7 @@ class ThingsToDo extends React.Component {
     return (
       <div>
         <Row id="things" className="padding-5">
-          <div className="padding-40"></div>
+          <div className="padding-40px"></div>
           <div className="padding-15"></div>
           <h1>Things To Do</h1>
         </Row>

@@ -25,6 +25,10 @@ $theme-colors: (
   color: black;
 }
 
+.text-centered {
+  text-align: center;
+}
+
 .jumbotron-image {
   background: url('images/city-hall.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
   padding: 25%;
@@ -44,7 +48,7 @@ $theme-colors: (
 }
 
 .padding-0 {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .padding-5 {
@@ -59,8 +63,20 @@ $theme-colors: (
   padding: 20px;
 }
 
-.padding-40 {
+.padding-40px {
   padding: 40px;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.margin-right-1p {
+  margin-right: 1%;
+}
+
+.margin-bottom-none {
+  margin-bottom: 0% !important;
 }
 
 .border-1 {
@@ -84,6 +100,16 @@ $theme-colors: (
   display: inline;
   font-size: 2em;
   vertical-align: middle;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#footer {
+  bottom: 0;
+  width: 100%;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
