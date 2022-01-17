@@ -6,7 +6,7 @@ import React, { Component } from "react";
 class YsNavLogo extends Component {
   render () {
     return <div>
-      <Navbar.Brand  href="#home">
+      <Navbar.Brand href="#home">
         <img
           alt=""
           src={logo}
@@ -14,7 +14,7 @@ class YsNavLogo extends Component {
           height="60"
           className="d-inline-block"
         />{' '}
-        <div id="city-brand"><strong>YS</strong> City of Waters</div>
+        <div id="city-brand"><strong>YS</strong> {this.props.tagline} </div>
       </Navbar.Brand>
     </div>
   }

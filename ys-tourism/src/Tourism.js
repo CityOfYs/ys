@@ -24,7 +24,7 @@ class App extends Component {
         </Alert>
           <Navbar bg="primary" expand="lg" variant="dark" sticky="top">
             <Container>
-              <YsNavLogo />
+              <YsNavLogo tagline="City of Waters"/>
               <Container>
                 <Nav className="me-auto" fill justify defaultActiveKey="/#home">
                   <Nav.Link href="#tourism" className="white-font">Planning Your Visit</Nav.Link>

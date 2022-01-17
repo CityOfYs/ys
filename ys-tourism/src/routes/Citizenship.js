@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Alert from 'react-bootstrap/Alert'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
 import React, { useState } from 'react';
@@ -15,32 +16,29 @@ export default function Citizenship() {
   const handleSelect = (eventKey) => setActiveLink(eventKey);
 
   return (
-    <main className="App">
-    <main className="App page-container">
-      <Navbar bg="primary" expand="lg" variant="dark" fixed="top">
+    <main className="page-container">
+      <Alert className="text-centered padding-0 margin-bottom-none" variant="danger">
+         <Alert.Link href="">YCIS Response to Coronavirus (COVID-19) </Alert.Link>
+      </Alert>
+      <Navbar bg="primary" expand="lg" variant="dark" sticky="top" >
         <Container>
-          <YsNavLogo />
-          <Container>
-            <Nav className="me-auto" fill justify defaultActiveKey="/#home">
-              <Nav.Link href="#placeh" className="white-font">Placeholder</Nav.Link>
-            </Nav>
-          </Container>
+          <YsNavLogo tagline="Citizenship And Immigration Services" />
         </Container>
       </Navbar>
       <Container fluid>
-        <Row>
-          ...hi?
-        </Row>
-        <Row>
-          <h2>Naturalization Resource Center</h2>
-        </Row>
-        <Row>
-          <h2>Naturalization Resource Center</h2>
-        </Row>
-
+        <div className="padding-20"></div> 
         <Row>
           <Col>
-            <Nav defaultActiveKey="/home" className="flex-column" activeKey="/home" onSelect={handleSelect}>
+          </Col>
+          <Col xs={6}>
+            <h2 className="text-centered">Citizenship Resource Hub</h2>
+          </Col>
+          <Col>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Nav defaultActiveKey="citizenhome" className="flex-column" activeKey="citizenhome" onSelect={handleSelect}>
             <Nav.Link eventKey="citizenhome">Home</Nav.Link>
             <Nav.Link eventKey="eligibility">Citizenship Eligibility Tool</Nav.Link>
             <Nav.Link eventKey="disabled" disabled>
@@ -48,15 +46,17 @@ export default function Citizenship() {
             </Nav.Link>
             </Nav>
           </Col>
-          <Col style={{ display: activeLink === "eligibility" ? "block" : "none" }}>
+          <Col xs={6} style={{ display: activeLink === "eligibility" ? "inline-block" : "none" }}>
               Citizenship Eligibility Worksheet
               <PDFViewer />
           </Col>
-          <Col style={{ display: activeLink === "citizenhome" ? "block" : "none" }}>
-            So you with to become a citizen! Commendable, and foolhardy.
+          <Col xs={6} style={{ display: activeLink === "citizenhome" ? "inline-block" : "none" }}>
+            So you wish to become a citizen! Commendable, and foolhardy.
           </Col>
           <Col>
           </Col>
+        </Row>
+        <Row className="margin-5">
         </Row>
         <Footer orgname="Ys City Government"
           email="mailto:cityofys.gov+immigration-support"
