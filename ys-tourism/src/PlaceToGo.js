@@ -21,63 +21,63 @@ class PlaceToGo extends React.Component {
           <h1>Places To Go</h1>
         </Row>
         <Row className="padding-bottom-1p">
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={bluffs} />
               <Card.Title>Gralon Bluffs</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={cliffhouse} />
               <Card.Title>Corentin-By-The-Sea</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={theaterdistrict} />
               <Card.Title>The Kêr-Is District</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={ocean} />
               <Card.Title>The Cool, Dark Waters</Card.Title>
             </Card>
           </Col>
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
         </Row>
         <Row className="padding-bottom-1p">
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={wall} />
               <Card.Title>The Wall</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={cityhall} />
               <Card.Title>Ys City Hall</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={garden} />
               <Card.Title>Jardin Mari-Morgen</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={eyehouse} />
               <Card.Title>The House of Eyes</Card.Title>
             </Card>
           </Col>
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
         </Row>
       </div>
