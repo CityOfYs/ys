@@ -110,6 +110,7 @@ $theme-colors: (
 #footer {
   bottom: 0;
   width: 100%;
+  text-align: left;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";

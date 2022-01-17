@@ -15,8 +15,17 @@ class Footer extends React.Component {
           <Col>
           </Col>
           <Col>
+            Our Websites:
+            <ul>
+              <li><a href="https://cityofys.herokuapp.com/" className="white-font">Tourism</a></li>
+              <li><a href="https://cityofys.herokuapp.com/citizenship-resource-center" className="white-font">Immigration</a></li>
+            </ul>
+          </Col>
+          <Col>
+          </Col>
+          <Col>
           Contact Information:
-          <br /><a href={this.props.email}>Contact us by email</a>
+          <br /><a href={this.props.email}  className="white-font">Contact us by email</a>
           </Col>
           <Col>
           </Col>
