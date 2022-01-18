@@ -37,7 +37,7 @@ class Footer extends React.Component {
           <Col className="d-none d-lg-block">
           </Col>
         </Row>
-        <Row className="d-none d-sm-block d-xs-block d-md-block">
+        <Row className="d-lg-none d-sm-block d-xs-block">
           <div>© 2022 {this.props.orgname}. All Rights Reserved.</div>
         </Row>
       </div>
