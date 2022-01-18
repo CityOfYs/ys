@@ -25,18 +25,21 @@ export default function PDFViewer() {
   }
 
   return( <div>
-    <Document file={naturalizationFlowchart} onLoadSuccess={onDocumentLoadSuccess}>
+    <Document
+      file={naturalizationFlowchart}
+      onLoadSuccess={onDocumentLoadSuccess}
+       className="d-none d-lg-block">
       <Page pageNumber={pageNumber || 1} />
     </Document>
     <div>
-      <p>
+      <p className="d-none d-lg-block">
         Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
       </p>
       <Button
         variant="outline-primary"
         disabled={pageNumber <= 1}
         onClick={previousPage}
-        className="margin-right-1p"
+        className="margin-right-1p d-none d-lg-inline-block"
       >
         Previous
       </Button>
@@ -44,7 +47,7 @@ export default function PDFViewer() {
         variant="outline-primary"
         disabled={pageNumber >= numPages}
         onClick={nextPage}
-        className="margin-right-1p"
+        className="margin-right-1p d-none d-lg-inline-block"
       >
         Next
       </Button>

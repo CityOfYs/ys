@@ -21,63 +21,63 @@ class ThingsToDo extends React.Component {
           <h1>Things To Do</h1>
         </Row>
         <Row className="padding-bottom-1p">
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={stream} />
               <Card.Title>Outdoor Adventure</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={sunsetshore} />
               <Card.Title>Coastal Adventure</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={food} />
               <Card.Title>Culinary Activities</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={housetree} />
               <Card.Title>Experiences</Card.Title>
             </Card>
           </Col>
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
         </Row>
         <Row className="padding-bottom-1p">
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={cityfacade} />
               <Card.Title>Culture & Heritage</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={theater} />
               <Card.Title>Music & The Arts</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={festival} />
               <Card.Title>Festivals & Events</Card.Title>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '15rem' }}>
+            <Card style={{ width: '15rem' }} className="center">
               <Card.Img variant="top" src={sky} />
               <Card.Title>Marvel</Card.Title>
             </Card>
           </Col>
-          <Col>
+          <Col className="d-none d-lg-block">
           </Col>
         </Row>
       </div>
