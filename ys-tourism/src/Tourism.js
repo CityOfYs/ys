@@ -4,18 +4,23 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import Alert from 'react-bootstrap/Alert'
 import Weather from "./Weather";
 import PlaceToGo from "./PlaceToGo";
 import ThingsToDo from "./ThingsToDo";
 import Footer from "./Footer";
 import YsNavLogo from "./YsNavLogo";
+import { useLocation } from 'react-router-dom';
+import ReactGA from "react-ga4";
 
-class App extends Component {
 
-  render() {
-    return (
+export default function Tourism() {
+  let location = useLocation();
+  useEffect(() => {
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+  });
+  return (
       <div className="text-centered page-container" id="home">
         <Alert className="padding-0 margin-bottom-none" variant="danger" >
           COVID-19: Update for Travellers <Alert.Link href="https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19-travel-advice-for-the-general-public">
@@ -50,7 +55,5 @@ class App extends Component {
         </Container>
       </div>
     );
-  }
-}
 
-export default App;
+}
