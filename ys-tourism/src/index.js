@@ -9,6 +9,10 @@ import {
   Routes,
   Route
 } from "react-router-dom";import Citizenship from "./routes/Citizenship";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-9355GW9D85");
+ReactGA.send("pageview");
 
 ReactDOM.render(
   <React.StrictMode>
