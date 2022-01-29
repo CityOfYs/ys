@@ -7,13 +7,20 @@ import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PDFViewer from './PDFViewer';
+import ReactGA from "react-ga4";
+import { useLocation } from 'react-router-dom';
 
 
 export default function Citizenship() {
   const [activeLink, setActiveLink] = useState("citizenhome");
   const handleSelect = (eventKey) => setActiveLink(eventKey);
+  let location = useLocation();
+
+   useEffect(() => {
+       ReactGA.send({ hitType: "pageview", page: location.pathname });
+   });
 
   return (
     <main className="page-container">
@@ -26,7 +33,7 @@ export default function Citizenship() {
         </Container>
       </Navbar>
       <Container fluid>
-        <div className="padding-20"></div> 
+        <div className="padding-20"></div>
         <Row>
           <Col>
           </Col>
