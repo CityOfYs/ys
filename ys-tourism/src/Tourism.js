@@ -27,7 +27,7 @@ export default function Tourism() {
           Learn more
           </Alert.Link>
         </Alert>
-          <Navbar bg="primary" expand="lg" variant="dark" sticky="top">
+          <Navbar bg="primary-blue" expand="lg" variant="dark" sticky="top">
             <Container>
               <YsNavLogo tagline="City of Waters"/>
               <Container>

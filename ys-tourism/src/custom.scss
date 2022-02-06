@@ -3,18 +3,23 @@
 // Your variable overrides
 //$body-bg: #CAD5B2;
 $body-color: black;
-$bg-primary: #00418C;
-$bg-secondary: #CAD5B2;
+$bg-primary-green: #317267;
+$bg-primary-blue: #002266;
 
 $theme-colors: (
-  "primary": #00418C,
+  "primary-green": #317267,
+  "primary-blue": #002266,
   "danger": #ff4136,
   "dark": #00418C,
   "light": white
 );
 
-.primary-background {
-  background-color: $bg-primary
+.primary-blue-background {
+  background-color: $bg-primary-blue
+}
+
+.primary-green-background {
+  background-color: $bg-primary-green
 }
 
 .white-font {
