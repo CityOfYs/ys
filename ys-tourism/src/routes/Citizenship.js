@@ -54,11 +54,25 @@ export default function Citizenship() {
             </Nav>
           </Col>
           <Col xs={6} style={{ display: activeLink === "eligibility" ? "inline-block" : "none" }}>
-              Citizenship Eligibility Worksheet
+              <h6 className="margin-top-1p">
+                Before you begin the application for naturalization (Form L-900), answer a few questions to see if you are eligible
+                to apply to become a Ysian citizan through naturalization.
+              </h6>
+              <div>
+                These questions are solely intended to help you determine if you are eligible to submit Form L-900. These questions do not
+                actually determine if you are eligible for citizenship. After you submit your application, YCIS will review your information
+                and determine if you are eligible for citizenship through naturalization. This your door, and we are your doorkeeper.
+              </div>
+              <div className="padding-15"></div>
+              <h4>Citizenship Eligibility Worksheet </h4>
               <PDFViewer />
           </Col>
           <Col xs={6} style={{ display: activeLink === "citizenhome" ? "inline-block" : "none" }}>
-            So you wish to become a citizen! Commendable, and foolhardy.
+            <div className="padding-15"></div>
+            <div>
+                So you wish to become a citizen! Commendable, and foolhardy. Our walls are not yet ready to receive you, but they will be.
+                In the meantime, reflect, observe, and wait.
+            </div>
           </Col>
           <Col>
           </Col>
