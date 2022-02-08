@@ -27,7 +27,7 @@ export default function Citizenship() {
       <Alert className="text-centered padding-0 margin-bottom-none" variant="danger">
          <Alert.Link href="">YCIS Response to Coronavirus (COVID-19) </Alert.Link>
       </Alert>
-      <Navbar bg="primary" expand="lg" variant="dark" sticky="top" >
+      <Navbar bg="primary-green" expand="lg" variant="dark" sticky="top" >
         <Container>
           <YsNavLogo tagline="Citizenship And Immigration Services" />
         </Container>
@@ -67,7 +67,7 @@ export default function Citizenship() {
         </Row>
         <Footer orgname="Ys City Government"
           email="mailto:cityofys.gov+immigration-support"
-          needsAbs={activeLink === "citizenhome" ? true : false} />
+          citizenship={activeLink === "citizenhome" ? true : false} />
       </Container>
     </main>
   );

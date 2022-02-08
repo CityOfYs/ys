@@ -28,4 +28,4 @@ Your app is ready to be deployed!
 
 # Deploying
 
-Deployed on heroku, run `git push heroku master`
+Deployed on heroku, run `git push heroku main`
