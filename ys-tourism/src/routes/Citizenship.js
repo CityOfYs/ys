@@ -61,7 +61,7 @@ export default function Citizenship() {
               <div>
                 These questions are solely intended to help you determine if you are eligible to submit Form L-900. These questions do not
                 actually determine if you are eligible for citizenship. After you submit your application, YCIS will review your information
-                and determine if you are eligible for citizenship through naturalization. This your door, and we are your doorkeeper.
+                and determine if you are eligible for citizenship through naturalization. This is your door, and we are your doorkeeper.
               </div>
               <div className="padding-15"></div>
               <h4>Citizenship Eligibility Worksheet </h4>
