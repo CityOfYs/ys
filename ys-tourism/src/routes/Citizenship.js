@@ -81,7 +81,8 @@ export default function Citizenship() {
         </Row>
         <Footer orgname="Ys City Government"
           email="mailto:cityofys.gov+immigration-support"
-          citizenship={activeLink === "citizenhome" ? true : false} />
+          needsAbs={activeLink === "citizenhome" ? true : false}
+          citizenship={true} />
       </Container>
     </main>
   );
