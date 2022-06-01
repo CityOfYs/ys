@@ -67,23 +67,43 @@ void setup() {
 }
 
 void draw() {
-  background(#0d2280);
+  background(#0d2280); // The sea is deep
+  boolean theHourGrowsLate = (hour() == 0);
+  boolean theTurningIsNigh = (minute() == 0);
+  boolean howQuickItAllPasses = (second() == 0);
   
-  calcWave1();
-  renderWave1();
+  background(#040720); // The sea is treacherous
   
-  calcWave2();
+  if (theHourGrowsLate && theTurningIsNigh && howQuickItAllPasses) {
+    background(0); //It's done.
+  }
+  
+  calcWave1(theHourGrowsLate, theTurningIsNigh);
+  renderWave1(theHourGrowsLate);
+  
+  calcWave2(theHourGrowsLate, theTurningIsNigh);
   renderWave2();
   
-  renderClock();
+  renderClock(theHourGrowsLate, theTurningIsNigh, howQuickItAllPasses);
 }
 
-void renderClock() {
-  // Draw the clock background
-  fill(#317267);
+void renderClock(boolean theHourGrowsLate, boolean theTurningIsNigh, boolean howQuickItAllPasses) {
+  // Draw the clock background  
+  fill(#317267); // The city is orderly
+  if (theHourGrowsLate) {
+    fill(#8a0707); // The crimson knight comes
+  }
+  
   noStroke();
   ellipse(cx, cy, clockDiameter, clockDiameter);
   image(logo, cx*.69, cy*.42);
+  
+  if (!(theHourGrowsLate && theTurningIsNigh && howQuickItAllPasses)) {
+    renderClockHandsAndTicks(); //Then there is still hope
+  }
+}
+
+void renderClockHandsAndTicks() {
   // Angles for sin() and cos() start at 3 o'clock;
   // subtract HALF_PI to make them start at the top
   float s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
@@ -111,9 +131,17 @@ void renderClock() {
   endShape();
 }
 
-void calcWave1() {
+void calcWave1(boolean theHourGrowsLate, boolean theTurningIsNigh) {
   // Increment theta (try different values for 'angular velocity' here
   theta += 0.02;
+  
+  if (theHourGrowsLate) {
+    theta += 0.02; // A quickening
+  }
+  
+  if (theTurningIsNigh) {
+    theta -= 0.02; // A hesitance
+  }
 
   // For every x value, calculate a y value with sine function
   float x = theta;
@@ -123,18 +151,29 @@ void calcWave1() {
   }
 }
 
-void renderWave1() {
+void renderWave1(boolean theHourGrowsLate) {
   noStroke();
-  fill(11,80,79, 20);
+  fill(11,80,79, 20); //The currents have their rhythms
+  
+  if (theHourGrowsLate) {
+    fill(0,60); //Something moves through the dark
+  }
+  
   // A simple way to draw the wave with an ellipse at each location
   for (int x = 0; x < yvalues.length; x++) {
     ellipse(x*xspacing, height/2+yvalues[x], 100, 100);
   }
 }
 
-void calcWave2() {
-  // Increment theta (try different values for 'angular velocity' here
+void calcWave2(boolean theHourGrowsLate, boolean theTurningIsNigh) {
   theta2 += 0.02;
+  
+  if (theHourGrowsLate) {
+    theta2 += 0.04; // The sea is restless
+    if (theTurningIsNigh) {
+      theta2 += 0.03; // The sea roils
+    }
+  }
 
   // Set all height values to zero
   for (int i = 0; i < yvalues2.length; i++) {
@@ -154,12 +193,10 @@ void calcWave2() {
 }
 
 void renderWave2() {
-  // A simple way to draw the wave with an ellipse at each location
   noStroke();
   fill(5,24,84);
-  ellipseMode(CENTER);
+  fill(0,0,43);
   for (int x = 0; x < yvalues2.length; x++) {
-    //ellipse(x*xspacing,height/2+yvalues2[x],16,16);
     quad(x, height-yvalues2[x]*6,x+xspacing, height-yvalues2[x]*6,x+xspacing, height,x, height);
   }
 }
