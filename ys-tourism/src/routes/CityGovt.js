@@ -24,11 +24,6 @@ export default function CityGovt() {
   });
   return (
       <div className="page-container">
-        <Alert className="padding-0 margin-bottom-none" variant="danger" >
-          COVID-19: Update for Travellers <Alert.Link href="https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19-travel-advice-for-the-general-public">
-          Learn more
-          </Alert.Link>
-        </Alert>
           <Navbar bg="primary-blue" expand="lg" variant="dark" sticky="top">
             <Container>
               <YsNavLogo tagline="City of Waters"/>
