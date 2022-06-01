@@ -39,6 +39,10 @@ float[] yvalues2;                           // Using an array to store height va
 boolean overButton = false;
 
 void setup() {
+  surface.setTitle("Licensed Ysian Timepiece");
+  PImage icon = loadImage("logo.png");
+  surface.setIcon(icon);
+  
   size(640, 360);
   
   w = width+16;
