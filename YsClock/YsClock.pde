@@ -36,6 +36,8 @@ float[] amplitude2 = new float[maxwaves];   // Height of wave
 float[] dx2 = new float[maxwaves];          // Value for incrementing X, to be calculated as a function of period and xspacing
 float[] yvalues2;                           // Using an array to store height values for the wave (not entirely necessary)
 
+boolean overButton = false;
+
 void setup() {
   size(640, 360);
   
@@ -72,7 +74,9 @@ void draw() {
   boolean theTurningIsNigh = (minute() == 0);
   boolean howQuickItAllPasses = (second() == 0);
   
-  background(#040720); // The sea is treacherous
+  if (theHourGrowsLate) {
+    background(#040720); // The sea is treacherous
+  }
   
   if (theHourGrowsLate && theTurningIsNigh && howQuickItAllPasses) {
     background(0); //It's done.
@@ -85,6 +89,12 @@ void draw() {
   renderWave2();
   
   renderClock(theHourGrowsLate, theTurningIsNigh, howQuickItAllPasses);
+  if (overButton == true) {
+    cursor(HAND); // Come home
+    if (theHourGrowsLate && theTurningIsNigh && howQuickItAllPasses) {
+      cursor(WAIT); // Perhaps one day, we can begin again
+    }
+  } 
 }
 
 void renderClock(boolean theHourGrowsLate, boolean theTurningIsNigh, boolean howQuickItAllPasses) {
@@ -198,5 +208,28 @@ void renderWave2() {
   fill(0,0,43);
   for (int x = 0; x < yvalues2.length; x++) {
     quad(x, height-yvalues2[x]*6,x+xspacing, height-yvalues2[x]*6,x+xspacing, height,x, height);
+  }
+}
+
+void mousePressed() {
+  if (overButton) { 
+    link("https://cityofys.herokuapp.com/citizenship-resource-center");
+  }
+}
+
+void mouseMoved() { 
+  checkButtons(); 
+}
+  
+void mouseDragged() {
+  checkButtons(); 
+}
+
+void checkButtons() {
+  if (mouseX > cx-50 && mouseX < cx+50 && mouseY > cy-50 && mouseY < cy+50) {
+    overButton = true;   
+  } else {
+    overButton = false;
+    cursor(ARROW);
   }
 }
