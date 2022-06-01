@@ -8,10 +8,11 @@ import Alert from 'react-bootstrap/Alert'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
 import React, { useState, useEffect } from 'react';
-import PDFViewer from './PDFViewer';
+import Image from 'react-bootstrap/Image'
 import ReactGA from "react-ga4";
 import { useLocation } from 'react-router-dom';
 import { ReactEmbeddedGoogleCalendar } from 'react-embedded-google-calendar';
+import theater from './../images/theater.png';
 
 
 export default function CityGovt() {
@@ -22,7 +23,7 @@ export default function CityGovt() {
       ReactGA.send({ hitType: "pageview", page: location.pathname });
   });
   return (
-      <div className="text-centered page-container" id="home">
+      <div className="page-container">
         <Alert className="padding-0 margin-bottom-none" variant="danger" >
           COVID-19: Update for Travellers <Alert.Link href="https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19-travel-advice-for-the-general-public">
           Learn more
@@ -32,33 +33,46 @@ export default function CityGovt() {
             <Container>
               <YsNavLogo tagline="City of Waters"/>
               <Container>
-                <Nav className="me-auto" fill justify defaultActiveKey="/#home">
-                  <Nav.Link href="#places" className="link-light">Licenses & Permits</Nav.Link>
-                  <Nav.Link href="#things" className="link-light">Programs & Initiatives</Nav.Link>
+                <Nav className="me-auto" fill justify defaultActiveKey="home" onSelect={handleSelect}>
+                  <Nav.Link eventKey="licenses" className="link-light">Licenses & Permits</Nav.Link>
+                  <Nav.Link eventKey="programs" className="link-light">Programs & Initiatives</Nav.Link>
                   <Nav.Link href="https://cityofys.herokuapp.com/tourism" className="white-font">Tourism</Nav.Link>
                 </Nav>
               </Container>
             </Container>
           </Navbar>
           <Container fluid>
-            <Row>
-                Welcome to Ys
-            </Row>
-            <Row>
-                <Col>
+            <Row style={{ display: (activeLink !== "licenses" && activeLink !== "programs") ? "" : "none" }}>
+              <Row>
+                <Col  md={{ span: 4, offset: 5 }}>
+                <h1 className="margin-top-1p">Welcome to Ys!</h1>
                 </Col>
-                <Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 2 }}>
+                    <Image roundedCircle={true} src={theater} />
+                </Col>
+              </Row>
+            </Row>
+            <Row style={{ display: activeLink === "licenses" ? "block" : "none" }}>
+                <Col md={{ span: 7, offset: 3 }}>
+                    As of October 15th, 2019, all citizens of Ys require a license to own and operate a clock or timepiece.
+                    Please contact the <a href="mailto:cityofys.gov+permitsandlicenses@gmail.com">appropriate department</a> to inquire about licensing and registration.
+                    <br /> <br />
+                    Vistors on a travel visa may request a city timepiece for the duration of their stay, if they can demonstrate a need.
+                </Col>
+            </Row>
+            <Row style={{ display: activeLink === "programs" ? "block" : "none" }}>
+                <Col md={{ span: 6, offset: 3 }}>
                     <ReactEmbeddedGoogleCalendar
                     publicUrl ="https://calendar.google.com/calendar/embed?src=v6rj4d9j4js9qad0n36uec1s5k%40group.calendar.google.com"
                     height= '400px'/>
-                </Col>
-                <Col>
                 </Col>
             </Row>
           </Container>
           <Footer orgname="Ys City Government"
             email="mailto:cityofys.gov+immigration-support"
-            needsAbs={activeLink === "citizenhome" ? true : false} />
+            needsAbs={true} />
           </div>
       );
   }
