@@ -58,7 +58,7 @@ export default function CityGovt() {
                 </Col>
             </Row>
             <Row style={{ display: activeLink === "programs" ? "block" : "none" }}>
-                <Col md={{ span: 6, offset: 3 }}>
+                <Col md={{ span: 6, offset: 3 }} className="margin-top-1p">
                     <ReactEmbeddedGoogleCalendar
                     publicUrl ="https://calendar.google.com/calendar/embed?src=v6rj4d9j4js9qad0n36uec1s5k%40group.calendar.google.com"
                     height= '400px'/>
