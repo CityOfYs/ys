@@ -14,18 +14,19 @@ class Footer extends React.Component {
           </Col>
           <Col className="d-none d-lg-block">
           </Col>
-          <Col>
+          <Col className="padding-0">
             Our Websites:
             <ul>
-              <li><a href="https://cityofys.herokuapp.com/" className="white-font">Tourism</a></li>
+              <li><a href="https://cityofys.herokuapp.com" className="white-font">City Government</a></li>
+              <li><a href="https://cityofys.herokuapp.com/tourism" className="white-font">Tourism</a></li>
               <li><a href="https://cityofys.herokuapp.com/citizenship-resource-center" className="white-font">Immigration</a></li>
             </ul>
           </Col>
           <Col className="d-none d-lg-block">
           </Col>
-          <Col>
-          Contact Information:
-          <br /><a href={this.props.email}  className="white-font">Contact us by email</a>
+          <Col  className="padding-0">
+              Contact Information:
+              <br /><a href={this.props.email}  className="white-font">Contact us by email</a>
           </Col>
           <Col className="d-none d-lg-block">
           </Col>
