@@ -15,7 +15,7 @@ import theater from './../images/theater.png';
 
 
 export default function CityGovt() {
-    const [activeLink, setActiveLink] = useState("citizenhome");
+    const [activeLink, setActiveLink] = useState("home");
     const handleSelect = (eventKey) => setActiveLink(eventKey);
     let location = useLocation();
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function CityGovt() {
             <Container>
               <YsNavLogo tagline="City of Waters"/>
               <Container>
-                <Nav className="me-auto" fill justify defaultActiveKey="home" activekey="home" onSelect={handleSelect}>
+                <Nav className="me-auto" fill justify defaultActiveKey="home" activeKey="home" onSelect={handleSelect}>
                   <Nav.Link eventKey="home" className="link-light">Home</Nav.Link>
                   <Nav.Link eventKey="licenses" className="link-light">Licenses & Permits</Nav.Link>
                   <Nav.Link eventKey="programs" className="link-light">Programs & Initiatives</Nav.Link>
