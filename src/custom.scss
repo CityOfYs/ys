@@ -109,6 +109,10 @@ $theme-colors: (
     max-height: 30em;
 }
 
+.max-width-100p {
+    max-width: 100%;
+}
+
 //hacky, let's not select on a default id within the react-p5 lib
 #defaultCanvas0 {
     border-radius: 50%;

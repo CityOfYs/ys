@@ -48,7 +48,7 @@ export default function CityGovt() {
               </Row>
               <Row>
                 <Col md={{ span: 6, offset: 4 }}>
-                    <Image roundedCircle={true} src={theater} className="max-height-30em margin-10" />
+                    <Image roundedCircle={true} src={theater} className="max-height-30em margin-10 max-width-100p" />
                 </Col>
               </Row>
             </Row>
