@@ -109,6 +109,11 @@ $theme-colors: (
     max-height: 30em;
 }
 
+//hacky, let's not select on a default id within the react-p5 lib
+#defaultCanvas0 {
+    border-radius: 50%;
+}
+
 .hero-font {
   font-size: 5em;
   font-family: cursive;
