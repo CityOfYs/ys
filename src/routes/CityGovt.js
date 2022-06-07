@@ -53,9 +53,9 @@ export default function CityGovt() {
               </Row>
             </Row>
             <Row style={{ display: activeLink === "licenses" ? "" : "none" }}>
-                <Row>
-                    <Col md={{ span: 7, offset: 3 }}>
-                        <Clock className="text-centered" />
+                <Row className="padding-5">
+                    <Col md={{ span: 7, offset: 3 }}  className="text-centered" >
+                        <Clock/>
                     </Col>
                 </Row>
                 <Row>
