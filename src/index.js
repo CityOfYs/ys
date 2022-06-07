@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Tourism from './Tourism';
+import CityGovt from './routes/CityGovt';
 import reportWebVitals from './reportWebVitals';
 import './custom.scss';
 import {
   BrowserRouter,
   Routes,
   Route
-} from "react-router-dom";import Citizenship from "./routes/Citizenship";
+} from "react-router-dom";
+import Citizenship from "./routes/Citizenship";
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-9355GW9D85");
@@ -18,8 +20,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Tourism />} />
+        <Route path="/tourism" element={<Tourism />} />
         <Route path="citizenship-resource-center" element={<Citizenship />} />
+        <Route path="/" element={<CityGovt />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
