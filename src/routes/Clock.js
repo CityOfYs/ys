@@ -27,13 +27,12 @@ export default function Clock() {
         p5.background(0);
         p5.noStroke();
         p5.fill(244, 122, 158);
-        //p5.ellipse(cx, cy, clockDiameter + 25, clockDiameter + 25);
 
           // Draw the clock background
           p5.noStroke();
-          p5.fill(244, 122, 158);
+          p5.fill(13, 34, 128);
           p5.ellipse(cx, cy, clockDiameter + 25, clockDiameter + 25);
-          p5.fill(237, 34, 93);
+          p5.fill(4, 7, 32);
           p5.ellipse(cx, cy, clockDiameter, clockDiameter);
 
           // Angles for sin() and cos() start at 3 o'clock;
