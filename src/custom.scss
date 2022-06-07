@@ -72,6 +72,10 @@ $theme-colors: (
   padding: 40px;
 }
 
+.margin-10 {
+  margin: 10px;
+}
+
 .margin-5 {
   margin: 5px;
 }
@@ -99,6 +103,10 @@ $theme-colors: (
 .center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.max-height-30em {
+    max-height: 30em;
 }
 
 .hero-font {
