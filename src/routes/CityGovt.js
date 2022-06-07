@@ -12,15 +12,18 @@ import ReactGA from "react-ga4";
 import { useLocation } from 'react-router-dom';
 import { ReactEmbeddedGoogleCalendar } from 'react-embedded-google-calendar';
 import theater from './../images/theater.png';
+import Clock from './Clock';
 
 
 export default function CityGovt() {
     const [activeLink, setActiveLink] = useState("home");
     const handleSelect = (eventKey) => setActiveLink(eventKey);
     let location = useLocation();
-  useEffect(() => {
+
+    useEffect(() => {
       ReactGA.send({ hitType: "pageview", page: location.pathname });
-  });
+    });
+
   return (
       <div className="page-container">
           <Navbar bg="primary-blue" expand="lg" variant="dark" sticky="top">
@@ -49,13 +52,20 @@ export default function CityGovt() {
                 </Col>
               </Row>
             </Row>
-            <Row style={{ display: activeLink === "licenses" ? "block" : "none" }}>
-                <Col md={{ span: 7, offset: 3 }}>
-                    As of October 15th, 2019, all citizens of Ys require a license to own and operate a clock or timepiece.
-                    Please contact the <a href="mailto:cityofys.gov+permitsandlicenses@gmail.com">appropriate department</a> to inquire about licensing and registration.
-                    <br /> <br />
-                    Vistors on a travel visa may request a city timepiece for the duration of their stay, if they can demonstrate a need.
-                </Col>
+            <Row style={{ display: activeLink === "licenses" ? "" : "none" }}>
+                <Row>
+                    <Col md={{ span: 7, offset: 3 }}>
+                        <Clock className="text-centered" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={{ span: 7, offset: 3 }}>
+                        As of October 15th, 2019, all citizens of Ys require a license to own and operate a clock or timepiece.
+                        Please contact the <a href="mailto:cityofys.gov+permitsandlicenses@gmail.com">appropriate department</a> to inquire about licensing and registration.
+                        <br /> <br />
+                        Vistors on a travel visa may request a city timepiece for the duration of their stay, if they can demonstrate a need.
+                    </Col>
+                </Row>
             </Row>
             <Row style={{ display: activeLink === "programs" ? "block" : "none" }}>
                 <Col md={{ span: 6, offset: 3 }} className="margin-top-1p">
