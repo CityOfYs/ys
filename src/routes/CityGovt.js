@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Alert from 'react-bootstrap/Alert'
 import YsNavLogo from "./../YsNavLogo";
 import Footer from "./../Footer";
 import React, { useState, useEffect } from 'react';
@@ -28,7 +27,8 @@ export default function CityGovt() {
             <Container>
               <YsNavLogo tagline="City of Waters"/>
               <Container>
-                <Nav className="me-auto" fill justify defaultActiveKey="home" onSelect={handleSelect}>
+                <Nav className="me-auto" fill justify defaultActiveKey="home" activekey="home" onSelect={handleSelect}>
+                  <Nav.Link eventKey="home" className="link-light">Home</Nav.Link>
                   <Nav.Link eventKey="licenses" className="link-light">Licenses & Permits</Nav.Link>
                   <Nav.Link eventKey="programs" className="link-light">Programs & Initiatives</Nav.Link>
                   <Nav.Link href="https://cityofys.herokuapp.com/tourism" className="white-font">Tourism</Nav.Link>
@@ -37,15 +37,15 @@ export default function CityGovt() {
             </Container>
           </Navbar>
           <Container fluid>
-            <Row style={{ display: (activeLink !== "licenses" && activeLink !== "programs") ? "" : "none" }}>
+            <Row style={{ display: activeLink === "home" ? "" : "none" }}>
               <Row>
-                <Col  md={{ span: 4, offset: 5 }}>
-                <h1 className="margin-top-1p">Welcome to Ys!</h1>
+                <Col md={{ span: 6, offset: 3 }} className="text-centered">
+                    <h1 className="margin-top-1p">Welcome to Ys!</h1>
                 </Col>
               </Row>
               <Row>
-                <Col md={{ span: 6, offset: 2 }}>
-                    <Image roundedCircle={true} src={theater} />
+                <Col md={{ span: 6, offset: 4 }}>
+                    <Image roundedCircle={true} src={theater} className="max-height-30em margin-10" />
                 </Col>
               </Row>
             </Row>
@@ -67,7 +67,7 @@ export default function CityGovt() {
           </Container>
           <Footer orgname="Ys City Government"
             email="mailto:cityofys.gov+immigration-support"
-            needsAbs={true} />
+            needsAbs={activeLink === "home" ? false : true} />
           </div>
       );
   }
