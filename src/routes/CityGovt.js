@@ -46,7 +46,7 @@ export default function CityGovt() {
                     <h1 className="margin-top-1p">Welcome to Ys!</h1>
                 </Col>
               </Row>
-              <Row>
+              <Row className="margin-top-3p">
                 <Col md={{ span: 6, offset: 4 }}>
                     <Image roundedCircle={true} src={theater} className="max-height-30em margin-10 max-width-100p" />
                 </Col>
@@ -77,7 +77,7 @@ export default function CityGovt() {
           </Container>
           <Footer orgname="Ys City Government"
             email="mailto:cityofys.gov+immigration-support"
-            needsAbs={activeLink === "home" ? false : true} />
+            needsAbs={true} />
           </div>
       );
   }
